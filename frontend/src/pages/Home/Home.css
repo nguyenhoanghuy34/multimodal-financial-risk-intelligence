@@ -1,0 +1,331 @@
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin: 48px 0 30px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.hero h1 {
+  max-width: 700px;
+
+  margin-top: 14px;
+
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 620px;
+
+  margin-top: 18px;
+
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border-radius: 10px;
+
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: var(--success);
+
+  box-shadow: 0 0 10px var(--success);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 20px;
+
+  border-radius: var(--radius-lg);
+}
+
+.stat-header,
+.stat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-header {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.stat-header svg {
+  color: var(--accent);
+}
+
+.stat-value {
+  margin: 20px 0 14px;
+
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.stat-value.danger {
+  color: var(--danger);
+}
+
+.stat-footer {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.negative {
+  color: var(--danger);
+}
+
+.progress {
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.progress div {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-secondary)
+  );
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+
+  margin-top: 16px;
+}
+
+.chart-card,
+.risk-card {
+  min-height: 360px;
+
+  padding: 24px;
+
+  border-radius: var(--radius-lg);
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-label {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.card-heading h2 {
+  margin-top: 6px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.period-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+.chart-placeholder {
+  position: relative;
+
+  height: 250px;
+  margin-top: 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 100% 50px;
+}
+
+.chart-line {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  clip-path: polygon(
+    0 75%,
+    10% 68%,
+    18% 72%,
+    28% 52%,
+    38% 58%,
+    48% 35%,
+    58% 45%,
+    68% 27%,
+    78% 38%,
+    88% 15%,
+    100% 23%,
+    100% 26%,
+    88% 18%,
+    78% 41%,
+    68% 30%,
+    58% 48%,
+    48% 38%,
+    38% 61%,
+    28% 55%,
+    18% 75%,
+    10% 71%,
+    0 78%
+  );
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-secondary)
+  );
+}
+
+.chart-label {
+  position: absolute;
+  right: 0;
+
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.label-1 {
+  top: 0;
+}
+
+.label-2 {
+  top: 50%;
+}
+
+.label-3 {
+  bottom: 0;
+}
+
+.risk-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.risk-card .card-label {
+  align-self: flex-start;
+}
+
+.risk-circle {
+  width: 190px;
+  height: 190px;
+
+  margin: 25px 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(239, 68, 68, 0.08) 55%,
+      transparent 56%
+    );
+
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  box-shadow:
+    0 0 60px rgba(239, 68, 68, 0.1),
+    inset 0 0 40px rgba(239, 68, 68, 0.04);
+}
+
+.risk-circle div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.risk-circle strong {
+  color: var(--danger);
+  font-size: 22px;
+}
+
+.risk-circle span {
+  margin-top: 5px;
+
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.risk-card p {
+  max-width: 300px;
+
+  text-align: center;
+
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}

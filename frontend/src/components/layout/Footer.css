@@ -1,0 +1,39 @@
+.footer {
+  margin-top: auto;
+  padding: 20px 28px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand,
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer-brand {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.footer-copy,
+.github-link {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.github-link:hover {
+  color: var(--text-primary);
+}

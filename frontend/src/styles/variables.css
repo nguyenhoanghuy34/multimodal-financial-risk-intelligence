@@ -1,0 +1,23 @@
+:root {
+  --bg-primary: #060914;
+  --bg-secondary: #0b1020;
+
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --text-primary: #f4f7fb;
+  --text-secondary: #8d98aa;
+  --text-muted: #5d687a;
+
+  --accent: #38bdf8;
+  --accent-secondary: #6366f1;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+
+  --header-height: 72px;
+}
