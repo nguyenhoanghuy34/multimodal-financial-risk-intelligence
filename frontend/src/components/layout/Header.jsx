@@ -1,53 +1,57 @@
-import { Activity, Bell, ChevronDown } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
-export default function Header() {
+const navigation = [
+  {
+    label: "Overview",
+    path: "/overview",
+  },
+  {
+    label: "Prediction",
+    path: "/prediction",
+  },
+  {
+    label: "Market",
+    path: "/market",
+  },
+  {
+    label: "Models",
+    path: "/models",
+  },
+];
+
+function Header() {
   return (
-    <header className="header glass">
+    <header className="header">
       <div className="header-inner">
-        <a href="/" className="brand">
-          <div className="brand-icon">
-            <Activity size={20} />
-          </div>
 
-          <div>
-            <div className="brand-name">FINRISK AI</div>
-            <div className="brand-subtitle">Financial Intelligence</div>
-          </div>
-        </a>
+        <NavLink to="/prediction" className="logo">
+          <span className="logo-mark">
+            FR
+          </span>
 
-        <nav className="nav">
-          <a href="/" className="nav-link active">
-            Overview
-          </a>
+          <span className="logo-text">
+            Financial Risk Intelligence
+          </span>
+        </NavLink>
 
-          <a href="/prediction" className="nav-link">
-            Prediction
-          </a>
-
-          <a href="/market" className="nav-link">
-            Indicators
-          </a>
-
-          <a href="/models" className="nav-link">
-            Models
-          </a>
+        <nav className="navigation">
+          {navigation.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
-        <div className="header-actions">
-          <button className="icon-button glass">
-            <Bell size={18} />
-          </button>
-
-          <button className="profile glass">
-            <div className="avatar">L</div>
-
-            <span>Louis</span>
-
-            <ChevronDown size={15} />
-          </button>
-        </div>
       </div>
     </header>
   );
 }
+
+export default Header;
