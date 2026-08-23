@@ -21,7 +21,6 @@
   align-items: center;
 
   position: relative;
-
   overflow: hidden;
 
   padding: 48px;
@@ -106,7 +105,6 @@
 
 .hero-meta {
   display: flex;
-
   gap: 10px;
 }
 
@@ -158,7 +156,9 @@
     0 0 10px rgba(98, 230, 173, 0.8);
 }
 
-/* Hero orb */
+/* ================================
+   HERO ORB
+================================ */
 
 .hero-orb {
   width: 310px;
@@ -286,7 +286,7 @@
 }
 
 .section-heading {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 
   display: flex;
 
@@ -321,13 +321,13 @@
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
 
-  gap: 12px;
+  gap: 10px;
 }
 
 .data-card {
-  min-height: 170px;
+  min-height: 125px;
 
-  padding: 20px;
+  padding: 16px;
 
   text-align: left;
 
@@ -335,7 +335,7 @@
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  border-radius: 18px;
+  border-radius: 14px;
 
   background:
     linear-gradient(
@@ -349,28 +349,28 @@
   cursor: pointer;
 
   transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    background 0.22s ease,
-    box-shadow 0.22s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .data-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.15);
 
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.065);
 }
 
 .data-card.selected {
-  border-color: rgba(91, 140, 255, 0.45);
+  border-color: rgba(91, 140, 255, 0.4);
 
   background:
     linear-gradient(
       135deg,
-      rgba(91, 140, 255, 0.13),
-      rgba(139, 108, 255, 0.05)
+      rgba(91, 140, 255, 0.12),
+      rgba(139, 108, 255, 0.04)
     );
 
   box-shadow:
@@ -382,43 +382,47 @@
 
   justify-content: space-between;
 
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .data-icon {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  border-radius: 10px;
+  border-radius: 8px;
 
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.05);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 
   color: var(--accent-cyan);
+
+  font-size: 12px;
 }
 
 .data-arrow {
   color: var(--text-muted);
 
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .data-card h3 {
-  margin: 0 0 6px;
+  margin: 0 0 5px;
 
-  font-size: 15px;
+  font-size: 13px;
+
+  font-weight: 600;
 }
 
 .data-subtitle {
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* ================================
@@ -426,17 +430,17 @@
 ================================ */
 
 .detail-card {
-  margin-top: 14px;
+  margin-top: 10px;
 
-  padding: 26px;
+  padding: 20px;
 
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 30px;
+  gap: 24px;
 
-  border-radius: 20px;
+  border-radius: 16px;
 
   background:
     linear-gradient(
@@ -455,11 +459,13 @@
 @keyframes detailIn {
   from {
     opacity: 0;
+
     transform: translateY(-5px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -467,12 +473,12 @@
 .detail-main {
   display: flex;
 
-  gap: 18px;
+  gap: 14px;
 }
 
 .detail-icon {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
 
   flex-shrink: 0;
 
@@ -481,19 +487,21 @@
   align-items: center;
   justify-content: center;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   background: var(--gradient-soft);
 
   border: 1px solid rgba(255, 255, 255, 0.10);
 
   color: var(--accent-cyan);
+
+  font-size: 12px;
 }
 
 .detail-kicker {
   color: var(--text-muted);
 
-  font-size: 9px;
+  font-size: 8px;
 
   font-weight: 700;
 
@@ -501,15 +509,17 @@
 }
 
 .detail-card h3 {
-  margin: 7px 0;
+  margin: 5px 0;
 
-  font-size: 21px;
+  font-size: 17px;
 }
 
 .detail-card p {
   margin: 0;
 
-  line-height: 1.65;
+  font-size: 12px;
+
+  line-height: 1.55;
 }
 
 .series-list {
@@ -517,32 +527,32 @@
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 8px;
+  gap: 6px;
 
   align-content: center;
 }
 
 .series-item {
-  padding: 10px 12px;
+  padding: 8px 10px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 9px;
+  gap: 7px;
 
-  border-radius: 10px;
+  border-radius: 8px;
 
   background: rgba(255, 255, 255, 0.035);
 
   color: var(--text-secondary);
 
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .series-dot {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
 
   flex-shrink: 0;
 
@@ -561,21 +571,21 @@
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
-  gap: 10px;
+  gap: 8px;
 }
 
 .forecast-card {
-  min-height: 108px;
+  min-height: 82px;
 
-  padding: 18px;
+  padding: 14px 16px;
 
   display: grid;
 
-  grid-template-columns: 42px 1fr 20px;
+  grid-template-columns: 32px 1fr 16px;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 
   text-align: left;
 
@@ -586,7 +596,7 @@
 
   border: 1px solid rgba(255, 255, 255, 0.075);
 
-  border-radius: 16px;
+  border-radius: 13px;
 
   cursor: pointer;
 
@@ -618,17 +628,19 @@
 .forecast-number {
   color: var(--accent-cyan);
 
-  font-size: 12px;
+  font-size: 10px;
 
   font-weight: 700;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .forecast-card h3 {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 
-  font-size: 14px;
+  font-size: 12px;
+
+  font-weight: 600;
 }
 
 .forecast-card p {
@@ -636,13 +648,15 @@
 
   color: var(--text-muted);
 
-  font-size: 11px;
+  font-size: 10px;
 
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .forecast-arrow {
   color: var(--text-muted);
+
+  font-size: 14px;
 
   transition: transform 0.2s ease;
 }
@@ -652,13 +666,13 @@
 }
 
 .task-detail {
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 80px 1fr;
 
   align-items: center;
 }
 
 .task-number-large {
-  font-size: 58px;
+  font-size: 48px;
 
   font-weight: 700;
 
@@ -674,13 +688,13 @@
 
   gap: 7px;
 
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .task-tags span {
-  padding: 6px 9px;
+  padding: 5px 8px;
 
-  border-radius: 8px;
+  border-radius: 7px;
 
   background: rgba(255, 255, 255, 0.045);
 
@@ -688,7 +702,7 @@
 
   color: var(--text-muted);
 
-  font-size: 10px;
+  font-size: 9px;
 }
 
 /* ================================
@@ -891,6 +905,7 @@
 
   .pipeline-line {
     width: 1px;
+
     height: 20px;
 
     flex: none;
@@ -912,6 +927,7 @@
 
   .hero-meta > div {
     flex: 1;
+
     min-width: 120px;
   }
 
