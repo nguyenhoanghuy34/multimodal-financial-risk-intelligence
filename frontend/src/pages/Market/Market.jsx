@@ -3,34 +3,44 @@ import "./Market.css";
 function Market() {
   return (
     <section className="market-page">
-
       <div className="market-container">
 
-        <span className="page-label">
-          MARKET INTELLIGENCE
-        </span>
+        <div className="glass-badge">
+          Market Intelligence
+        </div>
 
-        <h1>Market Indicators</h1>
+        <h1>
+          Market Indicators
+        </h1>
 
-        <p>
-          Monitor market conditions, macroeconomic signals
-          and financial indicators.
+        <p className="market-description">
+          Monitor market conditions, technical signals,
+          volatility and macroeconomic indicators.
         </p>
 
-        <div className="coming-soon-card">
-          <span>Market</span>
+        <div className="glass-card market-coming-soon">
 
-          <h2>Coming Soon</h2>
+          <div className="coming-soon-icon">
+            ◈
+          </div>
+
+          <span className="section-label">
+            Market
+          </span>
+
+          <h2>
+            Coming Soon
+          </h2>
 
           <p>
             Technical indicators, market regime,
             volatility and macroeconomic data
             will be displayed here.
           </p>
+
         </div>
 
       </div>
-
     </section>
   );
 }

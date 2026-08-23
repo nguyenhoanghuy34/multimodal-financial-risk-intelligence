@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+
 import "./Header.css";
 
 const navigation = [
@@ -31,7 +32,7 @@ function Header() {
           </span>
 
           <span className="logo-text">
-            Financial Risk Intelligence
+            FinRisk Intelligence
           </span>
         </NavLink>
 

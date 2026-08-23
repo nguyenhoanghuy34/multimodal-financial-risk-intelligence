@@ -1,23 +1,88 @@
 :root {
+  /* =========================
+     BACKGROUND
+  ========================= */
+
   --bg-primary: #060914;
-  --bg-secondary: #0b1020;
+  --bg-secondary: #0a1020;
+
+  /* =========================
+     GLASS
+  ========================= */
 
   --glass-bg: rgba(255, 255, 255, 0.055);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg-hover: rgba(255, 255, 255, 0.075);
 
-  --text-primary: #f4f7fb;
-  --text-secondary: #8d98aa;
-  --text-muted: #5d687a;
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-border-hover: rgba(255, 255, 255, 0.18);
 
-  --accent: #38bdf8;
-  --accent-secondary: #6366f1;
+  /* =========================
+     TEXT
+  ========================= */
 
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --danger: #ef4444;
+  --text-primary: #f7f9fc;
+  --text-secondary: rgba(247, 249, 252, 0.68);
+  --text-muted: rgba(247, 249, 252, 0.42);
 
-  --radius-lg: 20px;
+  /* =========================
+     ACCENTS
+  ========================= */
+
+  --accent-blue: #5b8cff;
+  --accent-purple: #8b6cff;
+  --accent-cyan: #36c9e8;
+
+  /* =========================
+     GRADIENTS
+  ========================= */
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #5b8cff 0%,
+      #8068ff 50%,
+      #36c9e8 100%
+    );
+
+  --gradient-soft:
+    linear-gradient(
+      135deg,
+      rgba(91, 140, 255, 0.18),
+      rgba(139, 108, 255, 0.12),
+      rgba(54, 201, 232, 0.10)
+    );
+
+  /* =========================
+     RADIUS
+  ========================= */
+
+  --radius-sm: 10px;
   --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* =========================
+     BLUR
+  ========================= */
+
+  --blur-sm: 12px;
+  --blur-md: 24px;
+  --blur-lg: 60px;
+
+  /* =========================
+     SHADOW
+  ========================= */
+
+  --shadow-glass:
+    0 20px 60px rgba(0, 0, 0, 0.32);
+
+  --shadow-glow:
+    0 0 60px rgba(91, 140, 255, 0.12);
+
+  /* =========================
+     LAYOUT
+  ========================= */
 
   --header-height: 72px;
+  --max-width: 1440px;
 }

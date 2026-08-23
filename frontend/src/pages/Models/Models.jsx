@@ -3,34 +3,44 @@ import "./Models.css";
 function Models() {
   return (
     <section className="models-page">
-
       <div className="models-container">
 
-        <span className="page-label">
-          MODEL INTELLIGENCE
-        </span>
+        <div className="glass-badge">
+          Model Intelligence
+        </div>
 
-        <h1>Risk Models</h1>
+        <h1>
+          Risk Models
+        </h1>
 
-        <p>
+        <p className="models-description">
           Explore the machine learning models powering
           the financial risk intelligence system.
         </p>
 
-        <div className="coming-soon-card">
-          <span>Models</span>
+        <div className="glass-card models-coming-soon">
 
-          <h2>Coming Soon</h2>
+          <div className="coming-soon-icon">
+            ◉
+          </div>
+
+          <span className="section-label">
+            Models
+          </span>
+
+          <h2>
+            Coming Soon
+          </h2>
 
           <p>
             Model performance, feature importance,
             evaluation metrics and model comparison
             will be available here.
           </p>
+
         </div>
 
       </div>
-
     </section>
   );
 }
