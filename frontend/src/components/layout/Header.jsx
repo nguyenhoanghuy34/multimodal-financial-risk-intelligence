@@ -32,7 +32,7 @@ function Header() {
           </span>
 
           <span className="logo-text">
-            FinRisk Intelligence
+            US MacroMind
           </span>
         </NavLink>
 
