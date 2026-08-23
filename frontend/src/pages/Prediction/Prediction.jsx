@@ -1,154 +1,159 @@
+import { useState } from "react";
 import "./Prediction.css";
 
+import UnemploymentForecast from "./UnemploymentForecast/UnemploymentForecast";
+import InflationForecast from "./InflationForecast/InflationForecast";
+import InterestRateForecast from "./InterestRateForecast/InterestRateForecast";
+import GDPForecast from "./GDPForecast/GDPForecast";
+import HousingForecast from "./HousingForecast/HousingForecast";
+import RecessionPrediction from "./RecessionPrediction/RecessionPrediction";
+import EconomicRegime from "./EconomicRegime/EconomicRegime";
+import EconomicRiskScore from "./EconomicRiskScore/EconomicRiskScore";
+
+const predictionItems = [
+  {
+    id: "unemployment",
+    number: "01",
+    title: "Unemployment Forecast",
+    short: "Unemployment",
+    component: UnemploymentForecast,
+  },
+  {
+    id: "inflation",
+    number: "02",
+    title: "Inflation Forecast",
+    short: "Inflation",
+    component: InflationForecast,
+  },
+  {
+    id: "interest-rate",
+    number: "03",
+    title: "Interest Rate Forecast",
+    short: "Interest Rate",
+    component: InterestRateForecast,
+  },
+  {
+    id: "gdp",
+    number: "04",
+    title: "GDP Forecast",
+    short: "GDP",
+    component: GDPForecast,
+  },
+  {
+    id: "housing",
+    number: "05",
+    title: "Housing Forecast",
+    short: "Housing",
+    component: HousingForecast,
+  },
+  {
+    id: "recession",
+    number: "06",
+    title: "Recession Prediction",
+    short: "Recession",
+    component: RecessionPrediction,
+  },
+  {
+    id: "regime",
+    number: "07",
+    title: "Economic Regime",
+    short: "Economic Regime",
+    component: EconomicRegime,
+  },
+  {
+    id: "risk",
+    number: "08",
+    title: "Economic Risk Score",
+    short: "Risk Score",
+    component: EconomicRiskScore,
+  },
+];
+
 function Prediction() {
+  const [activeId, setActiveId] = useState("unemployment");
+
+  const activeItem = predictionItems.find(
+    (item) => item.id === activeId
+  );
+
+  const ActiveComponent = activeItem.component;
+
   return (
     <section className="prediction-page">
       <div className="prediction-container">
 
-        <div className="prediction-header">
+        {/* LEFT NAVIGATION */}
 
-          <div>
-            <span className="page-label">
-              RISK ENGINE
+        <aside className="prediction-sidebar">
+
+          <div className="prediction-sidebar-header">
+            <span className="section-kicker">
+              MACRO MODELS
             </span>
 
-            <h1>
-              Financial Risk Prediction
-            </h1>
+            <h2>
+              Prediction
+            </h2>
 
             <p>
-              Analyze financial signals and predict
-              potential market risk using machine
-              learning models.
+              Select an economic forecasting task.
             </p>
           </div>
 
-          <div className="glass-badge prediction-status">
-            ● System Ready
-          </div>
+          <nav className="prediction-nav">
 
-        </div>
-
-        <div className="prediction-grid">
-
-          <div className="glass-card prediction-panel">
-            <div className="panel-header">
-              <div>
-                <span className="panel-label">
-                  INPUT
+            {predictionItems.map((item) => (
+              <button
+                key={item.id}
+                className={`prediction-nav-item ${
+                  activeId === item.id ? "active" : ""
+                }`}
+                onClick={() => setActiveId(item.id)}
+              >
+                <span className="prediction-nav-number">
+                  {item.number}
                 </span>
 
-                <h2>
-                  Market Parameters
-                </h2>
-              </div>
-            </div>
-
-            <div className="form-grid">
-
-              <div className="form-group">
-                <label>
-                  Asset
-                </label>
-
-                <select className="glass-select">
-                  <option>BTCUSDT</option>
-                  <option>ETHUSDT</option>
-                  <option>BNBUSDT</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label>
-                  Time Horizon
-                </label>
-
-                <select className="glass-select">
-                  <option>1 Minute</option>
-                  <option>5 Minutes</option>
-                  <option>15 Minutes</option>
-                  <option>30 Minutes</option>
-                  <option>60 Minutes</option>
-                </select>
-              </div>
-
-              <div className="form-group full">
-                <label>
-                  Current Price
-                </label>
-
-                <input
-                  className="glass-input"
-                  placeholder="Enter current price"
-                  type="number"
-                />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  Volatility
-                </label>
-
-                <input
-                  className="glass-input"
-                  placeholder="0.00"
-                  type="number"
-                />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  RSI
-                </label>
-
-                <input
-                  className="glass-input"
-                  placeholder="0 - 100"
-                  type="number"
-                />
-              </div>
-
-            </div>
-
-            <button className="glass-button prediction-button">
-              Generate Risk Prediction
-            </button>
-          </div>
-
-          <div className="glass-card prediction-panel result-panel">
-
-            <div className="panel-header">
-              <div>
-                <span className="panel-label">
-                  OUTPUT
+                <span className="prediction-nav-title">
+                  {item.short}
                 </span>
 
-                <h2>
-                  Risk Assessment
-                </h2>
-              </div>
+                <span className="prediction-nav-arrow">
+                  →
+                </span>
+              </button>
+            ))}
+
+          </nav>
+
+        </aside>
+
+        {/* MAIN CONTENT */}
+
+        <main className="prediction-content">
+
+          <div className="prediction-content-header">
+
+            <div>
+              <span className="section-kicker">
+                MODEL / {activeItem.number}
+              </span>
+
+              <h1>
+                {activeItem.title}
+              </h1>
             </div>
 
-            <div className="risk-placeholder">
-
-              <div className="risk-circle">
-                <span>--</span>
-              </div>
-
-              <h3>
-                Awaiting Prediction
-              </h3>
-
-              <p>
-                Submit market parameters to generate
-                a financial risk assessment.
-              </p>
-
+            <div className="prediction-status">
+              <span />
+              MODEL IN DEVELOPMENT
             </div>
 
           </div>
 
-        </div>
+          <ActiveComponent />
+
+        </main>
 
       </div>
     </section>
