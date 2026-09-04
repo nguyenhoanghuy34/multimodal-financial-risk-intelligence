@@ -1,5 +1,8 @@
+# Data
 Data/
-.evv/
+
+# Environment variables
+.env
 
 # Python virtual environment
 venv/
