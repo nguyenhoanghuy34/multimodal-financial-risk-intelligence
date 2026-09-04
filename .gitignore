@@ -1,2 +1,5 @@
 Data/
 .evv/
+
+# Python virtual environment
+venv/
